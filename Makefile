@@ -1,6 +1,7 @@
 # ihsec Makefile
 
 TARGET = /usr/local/bin/ihsec
+SHELL := /bin/bash
 
 .PHONY : install bash
 
