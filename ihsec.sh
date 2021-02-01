@@ -44,7 +44,7 @@ case "$1" in
 	if [ ! "$#" -eq 2 ]; then displayArgError; fi
 	if [ -d "$CONFIGS_DIR/$2" ]; then
 	    unlink $EMACSDIR &> /dev/null
-	    ln -s "$CONFIGS_DIR/$2/.*" $EMACSDIR
+	    ln -sfn "$CONFIGS_DIR/$2" $EMACSDIR
 	    if [[ $? != 0 ]]; then
 		displayError
 	    else
